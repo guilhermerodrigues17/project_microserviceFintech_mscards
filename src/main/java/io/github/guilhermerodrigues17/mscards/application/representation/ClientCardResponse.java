@@ -7,14 +7,14 @@ import java.math.BigDecimal;
 public record ClientCardResponse(
         String name,
         String brand,
-        BigDecimal creditLimit
+        BigDecimal approvedCreditLimit
 ) {
 
     public static ClientCardResponse fromModel(ClientCard model) {
         return new ClientCardResponse(
                 model.getCard().getName(),
                 model.getCard().getBrand().toString(),
-                model.getCreditLimit()
+                model.getApprovedCreditLimit()
         );
     }
 }

@@ -28,7 +28,7 @@ public class CardIssuanceSubscriber {
             ClientCard clientCard = new ClientCard();
             clientCard.setCard(card);
             clientCard.setCpf(data.getCpf());
-            clientCard.setCreditLimit(data.getApprovedCreditLimit());
+            clientCard.setApprovedCreditLimit(data.getApprovedCreditLimit());
 
             clientCardRepository.save(clientCard);
         }catch (Exception e) {
